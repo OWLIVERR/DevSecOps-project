@@ -7,7 +7,7 @@ COPY pom.xml .
 COPY src src
 
 RUN ./mvnw package
-COPY target/*.jar app.jar
+COPY target/my-application.jar app.jar
 
 FROM adoptopenjdk/openjdk11:alpine-slim
 VOLUME /tmp
